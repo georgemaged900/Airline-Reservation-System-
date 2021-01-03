@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WebApplication2.Models.Ticket>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seat_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Boarding_Gate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flight.User_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seat_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Boarding_Gate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flight.User_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Password)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Ticket_Number }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Ticket_Number }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Ticket_Number })
+        </td>
+    </tr>
+}
+
+</table>

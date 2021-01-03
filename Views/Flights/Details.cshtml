@@ -1,0 +1,74 @@
+﻿@model WebApplication2.Models.Flight
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Arrival_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arrival_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arrival_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arrival_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departure_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departure_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departure_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departure_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destination_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_of_passengers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_of_passengers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Password)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Flight_Number }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

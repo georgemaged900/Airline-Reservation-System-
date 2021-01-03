@@ -1,0 +1,74 @@
+﻿@model WebApplication2.Models.Ticket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ticket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seat_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seat_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Boarding_Gate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Boarding_Gate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flight.User_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flight.User_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Password)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Ticket_Number }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
